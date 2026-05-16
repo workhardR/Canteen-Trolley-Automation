@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <ProjectGuid>{2F3A0B6F-5D0B-4C62-8D6A-1D6F7B9F6A2A}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <RootNamespace>WebFormsCanteen</RootNamespace>
+    <AssemblyName>WebFormsCanteen</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <SaveCopyLocal>true</SaveCopyLocal>
+    <TargetLanguage>VB</TargetLanguage>
+    <UseIISExpress>true</UseIISExpress>
+    <IISExpressSSLPort>44300</IISExpressSSLPort>
+    <IISExpressAnonymousAuthentication>enabled</IISExpressAnonymousAuthentication>
+    <IISExpressWindowsAuthentication>disabled</IISExpressWindowsAuthentication>
+    <IISExpressUseClassicPipelineMode>false</IISExpressUseClassicPipelineMode>
+    <DevelopmentServerPort>1234</DevelopmentServerPort>
+    <DevelopmentServerVPath>/</DevelopmentServerVPath>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Content Include="..\Login.aspx">
+      <SubType>ASPXCodeBehind</SubType>
+    </Content>
+    <Content Include="..\Login.aspx.vb">
+      <SubType>ASPXCodeBehind</SubType>
+    </Content>
+    <Content Include="..\CanteenMaster.aspx">
+      <SubType>ASPXCodeBehind</SubType>
+    </Content>
+    <Content Include="..\CanteenMaster.aspx.vb">
+      <SubType>ASPXCodeBehind</SubType>
+    </Content>
+    <Content Include="..\AttendanceDetails.aspx">
+      <SubType>ASPXCodeBehind</SubType>
+    </Content>
+    <Content Include="..\AttendanceDetails.aspx.vb">
+      <SubType>ASPXCodeBehind</SubType>
+    </Content>
+    <Content Include="..\AttendanceDetails.aspx.designer.vb" />
+    <Content Include="..\CanteenMaster.aspx.designer.vb" />
+    <Content Include="..\PunchIn.aspx" />
+    <Content Include="..\PunchIn.aspx.vb" />
+    <Content Include="..\PunchInGuard.vb" />
+    <Content Include="..\PunchOut.aspx" />
+    <Content Include="..\PunchOut.aspx.vb" />
+    <Content Include="..\Web.config" />
+    <Content Include="..\vendor_attendance.sql" />
+    <Content Include="..\vendor_attendance_procs.sql" />
+    <Content Include="..\vendor_attendance_vgp_tables.sql" />
+  </ItemGroup>
+
+  <PropertyGroup>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectTypeGuids>{F184B08F-CCB3-4585-9BEA-8E0F67E1F0C3};{E6FDF5E2-1087-414C-BA8E-7A8E1B2D5B1B}</ProjectTypeGuids>
+  </PropertyGroup>
+
+  <Import Project="$(MSBuildExtensionsPath)\Microsoft\VisualStudio\v17.0\VB\Microsoft.VBApplication.targets" />
+</Project>
+
+
