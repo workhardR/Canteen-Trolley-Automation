@@ -67,9 +67,11 @@
         }
         .card h3 { font-size: 15px; color: #333; margin-bottom: 8px; }
         .card p  { font-size: 12px; color: #888; }
-        .card-punchin  .icon { color: #2e7d32; }
-        .card-punchout .icon { color: #c62828; }
-        .card-report   .icon { color: #1565c0; }
+        .card-punchin    .icon { color: #2e7d32; }
+        .card-punchout   .icon { color: #c62828; }
+        .card-report     .icon { color: #1565c0; }
+        .card-fasttrack  .icon { color: #ff6f00; }
+        .card-delivery   .icon { color: #6a1b9a; }
 
         .card-btn {
             margin-top: 16px;
@@ -82,9 +84,11 @@
             cursor: pointer;
             color: #fff;
         }
-        .card-punchin  .card-btn { background: #2e7d32; }
-        .card-punchout .card-btn { background: #c62828; }
-        .card-report   .card-btn { background: #1565c0; }
+        .card-punchin    .card-btn { background: #2e7d32; }
+        .card-punchout   .card-btn { background: #c62828; }
+        .card-report     .card-btn { background: #1565c0; }
+        .card-fasttrack  .card-btn { background: #ff6f00; }
+        .card-delivery   .card-btn { background: #6a1b9a; }
 
         /* ── Footer ── */
         .footer {
@@ -146,6 +150,24 @@
                 <p>View individual or canteen-wise attendance</p>
                 <asp:Button ID="btnAttendanceReport" runat="server" Text="View Report"
                             CssClass="card-btn" OnClick="btnAttendanceReport_Click" />
+            </asp:Panel>
+
+            <%-- Fast Track Booking Card --%>
+            <asp:Panel ID="pnlFastTrack" runat="server" CssClass="card card-fasttrack">
+                <div class="icon">&#9889;</div>
+                <h3>Fast Track Booking</h3>
+                <p>Quick booking for urgent / priority meal requests</p>
+                <asp:Button ID="btnGoToFastTrack" runat="server" Text="Fast Track"
+                            CssClass="card-btn" OnClick="btnGoToFastTrack_Click" />
+            </asp:Panel>
+
+            <%-- Meal Delivery Card --%>
+            <asp:Panel ID="pnlMealDelivery" runat="server" CssClass="card card-delivery">
+                <div class="icon">&#128666;</div>
+                <h3>Meal Delivery</h3>
+                <p>Track and confirm meal delivery at trolley points</p>
+                <asp:Button ID="btnGoToMealDelivery" runat="server" Text="Track Delivery"
+                            CssClass="card-btn" OnClick="btnGoToMealDelivery_Click" />
             </asp:Panel>
 
         </div>

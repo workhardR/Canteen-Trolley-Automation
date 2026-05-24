@@ -39,7 +39,7 @@ Partial Class PunchIn
                 ddlPickup.DataBind()
             End Using
         Catch ex As Exception
-            ' Provide dummy data for testing if DB is unavailable
+' Provide dummy data for testing if DB is unavailable
             Dim dtDummy As New DataTable()
             dtDummy.Columns.Add("PICKUP_ID")
             dtDummy.Columns.Add("PICKUP_NAME")
@@ -88,7 +88,7 @@ Partial Class PunchIn
                 cmd.ExecuteNonQuery()
                 statusMsg = outParam.Value.ToString()
             End Using
-        Catch ex As Exception
+Catch ex As Exception
             ' For testing: simulate success if DB fails
             statusMsg = "PUNCH_IN_SUCCESSFUL"
         End Try

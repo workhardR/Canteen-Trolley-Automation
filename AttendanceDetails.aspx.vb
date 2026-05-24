@@ -173,7 +173,7 @@ Partial Class AttendanceDetails
 
                 dt.Load(cmd.ExecuteReader())
             End Using
-        Catch ex As Exception
+Catch ex As Exception
             ' Dummy data for testing
             dt.Rows.Add("EMP001", 101, 201, 1, Date.Today.ToString("dd-MM-yyyy"), "08:30 AM", "09:00 AM", "OUT")
         End Try
@@ -199,7 +199,7 @@ Partial Class AttendanceDetails
 
                 dt.Load(cmd.ExecuteReader())
             End Using
-        Catch ex As Exception
+Catch ex As Exception
             ' Dummy data for testing
             dt.Rows.Add("EMP001", Date.Today.ToString("dd-MM-yyyy"), 1, 201, "", "", "")
         End Try

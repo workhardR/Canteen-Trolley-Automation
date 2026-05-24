@@ -38,7 +38,7 @@ Partial Class PunchOut
                 ddlPickup.DataValueField = "PICKUP_ID"
                 ddlPickup.DataBind()
             End Using
-        Catch ex As Exception
+Catch ex As Exception
             ' Dummy data for testing
             Dim dtDummy As New DataTable()
             dtDummy.Columns.Add("PICKUP_ID")
@@ -84,7 +84,7 @@ Partial Class PunchOut
                 cmd.ExecuteNonQuery()
                 statusMsg = outParam.Value.ToString()
             End Using
-        Catch ex As Exception
+Catch ex As Exception
             ' Simulate success for testing
             statusMsg = "PUNCH_OUT_SUCCESSFUL"
         End Try

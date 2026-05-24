@@ -45,6 +45,7 @@ Partial Class Login
     End Sub
  
     Private Function ValidateUser(userId As String, password As String) As DataRow
+' FOR TESTING: Allow admin/admin bypass
         ' FOR TESTING: Allow admin/admin bypass
         If userId = "admin" AndAlso password = "admin" Then
             Dim dtTest As New DataTable()

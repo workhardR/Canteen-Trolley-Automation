@@ -1,6 +1,6 @@
 ' ============================================================
 ' CanteenMaster.aspx.vb  –  Dashboard / Master Page
-' Shows: Punch-In | Punch-Out | Attendance Report tiles
+' Shows: Punch-In | Punch-Out | Attendance Report | Fast Track | Meal Delivery tiles
 ' Intercepts logout for vendors → redirects to PunchOut page
 ' Project: Automation of Canteen Trolley Operation
 ' ============================================================
@@ -26,6 +26,8 @@ Partial Class CanteenMaster
             pnlPunchOut.Visible = True
             ' For testing: let admin see attendance
             pnlAttendance.Visible = (userRole = "ccs" OrElse userRole = "ecs" OrElse userRole = "itadmin" OrElse userRole = "admin")
+            pnlFastTrack.Visible = True
+            pnlMealDelivery.Visible = True
         End If
     End Sub
 
@@ -42,6 +44,16 @@ Partial Class CanteenMaster
     ' ── Navigate to Attendance Report ─────────────────────────
     Protected Sub btnAttendanceReport_Click(sender As Object, e As EventArgs)
         Response.Redirect("~/AttendanceDetails.aspx")
+    End Sub
+
+    ' ── Navigate to Fast Track Booking ────────────────────────
+    Protected Sub btnGoToFastTrack_Click(sender As Object, e As EventArgs)
+        Response.Redirect("~/FastTrackBooking.aspx")
+    End Sub
+
+    ' ── Navigate to Meal Delivery ─────────────────────────────
+    Protected Sub btnGoToMealDelivery_Click(sender As Object, e As EventArgs)
+        Response.Redirect("~/MealDelivery.aspx")
     End Sub
 
     ' ── Logout Handler ────────────────────────────────────────
