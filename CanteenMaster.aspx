@@ -9,7 +9,12 @@
     <title>Canteen Dashboard</title>
     <style>
         * { box-sizing: border-box; margin: 0; padding: 0; }
-        body { font-family: Segoe UI, Arial, sans-serif; background: #f0f2f5; }
+        body {
+            font-family: Segoe UI, Arial, sans-serif;
+            background: linear-gradient(rgba(13, 71, 161, 0.45) 0%, rgba(25, 118, 210, 0.45) 60%, rgba(66, 165, 245, 0.45) 100%), url('images/tata_steel_morning.png') no-repeat center center fixed;
+            background-size: cover;
+            min-height: 100vh;
+        }
 
         /* ── Top Nav ── */
         .navbar {
@@ -51,9 +56,11 @@
             flex-wrap: wrap;
         }
         .card {
-            background: #fff;
+            background: rgba(255, 255, 255, 0.9);
+            backdrop-filter: blur(8px);
+            -webkit-backdrop-filter: blur(8px);
             border-radius: 10px;
-            box-shadow: 0 2px 10px rgba(0,0,0,0.10);
+            box-shadow: 0 4px 15px rgba(0,0,0,0.15);
             padding: 30px 28px;
             width: 220px;
             text-align: center;

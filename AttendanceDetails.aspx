@@ -9,7 +9,12 @@
     <title>Attendance Details</title>
     <style>
         * { box-sizing: border-box; margin: 0; padding: 0; }
-        body { font-family: Segoe UI, Arial, sans-serif; background: #f0f2f5; }
+        body {
+            font-family: Segoe UI, Arial, sans-serif;
+            background: linear-gradient(rgba(13, 71, 161, 0.45) 0%, rgba(25, 118, 210, 0.45) 60%, rgba(66, 165, 245, 0.45) 100%), url('images/tata_steel_morning.png') no-repeat center center fixed;
+            background-size: cover;
+            min-height: 100vh;
+        }
 
         .navbar {
             background: #1565c0;
@@ -31,14 +36,14 @@
         }
 
         .content { padding: 30px; }
-        h2 { color: #1a237e; margin-bottom: 20px; font-size: 20px; }
+        h2 { color: #fff; text-shadow: 0 2px 4px rgba(0,0,0,0.5); margin-bottom: 20px; font-size: 20px; }
 
         /* Toggle tabs */
         .tabs { display: flex; gap: 10px; margin-bottom: 24px; }
         .tab-btn {
             padding: 9px 22px;
             border: 2px solid #1565c0;
-            background: #fff;
+            background: rgba(255, 255, 255, 0.9);
             color: #1565c0;
             border-radius: 6px;
             cursor: pointer;
@@ -49,11 +54,13 @@
 
         /* Filter panels */
         .filter-panel {
-            background: #fff;
+            background: rgba(255, 255, 255, 0.9);
+            backdrop-filter: blur(8px);
+            -webkit-backdrop-filter: blur(8px);
             border-radius: 10px;
             padding: 22px 24px;
             margin-bottom: 24px;
-            box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+            box-shadow: 0 4px 15px rgba(0,0,0,0.15);
         }
         .filter-row { display: flex; gap: 20px; flex-wrap: wrap; align-items: flex-end; }
         .filter-field { display: flex; flex-direction: column; gap: 5px; }
@@ -89,10 +96,12 @@
 
         /* Grid */
         .grid-wrap {
-            background: #fff;
+            background: rgba(255, 255, 255, 0.9);
+            backdrop-filter: blur(8px);
+            -webkit-backdrop-filter: blur(8px);
             border-radius: 10px;
             padding: 20px;
-            box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+            box-shadow: 0 4px 15px rgba(0,0,0,0.15);
             overflow-x: auto;
         }
         .grid-header { display: flex; justify-content: space-between; align-items: center; margin-bottom: 14px; }

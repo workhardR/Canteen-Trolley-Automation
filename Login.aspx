@@ -7,22 +7,25 @@
 <!DOCTYPE html>
 <html>
 <head runat="server">
-    <title>Canteen System – Login</title>
+    <title>Canteen System - Login</title>
     <style>
         * { box-sizing: border-box; margin: 0; padding: 0; }
         body {
             font-family: Segoe UI, Arial, sans-serif;
-            background: linear-gradient(135deg, #0d47a1 0%, #1976d2 60%, #42a5f5 100%);
+            background: linear-gradient(rgba(13, 71, 161, 0.45) 0%, rgba(25, 118, 210, 0.45) 60%, rgba(66, 165, 245, 0.45) 100%), url('images/tata_steel_morning.png') no-repeat center center fixed;
+            background-size: cover;
             min-height: 100vh;
             display: flex;
             align-items: center;
             justify-content: center;
         }
         .card {
-            background: #fff;
+            background: rgba(255, 255, 255, 0.9);
+            backdrop-filter: blur(10px);
+            -webkit-backdrop-filter: blur(10px);
             width: 400px;
             border-radius: 12px;
-            box-shadow: 0 8px 32px rgba(0,0,0,0.22);
+            box-shadow: 0 8px 32px rgba(0,0,0,0.3);
             padding: 40px 36px 28px;
         }
         .logo {

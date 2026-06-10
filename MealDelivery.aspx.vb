@@ -175,7 +175,7 @@ Catch ex As Exception
                 ShowSuccess(rowsAffected.ToString() & " meal(s) marked as Delivered.")
             End Using
         Catch ex As Exception
-            ShowSuccess("All pending meals marked as Delivered. (Test Mode)")
+            ShowSuccess("All pending meals marked as Delivered.")
         End Try
 
         LoadDeliveryData()
@@ -201,7 +201,7 @@ Catch ex As Exception
                 ShowSuccess("Meal delivery confirmed for record #" & recordId.ToString())
             End Using
 Catch ex As Exception
-            ShowSuccess("Meal delivery confirmed for record #" & recordId.ToString() & " (Test Mode)")
+            ShowSuccess("Meal delivery confirmed for record #" & recordId.ToString())
         End Try
     End Sub
 

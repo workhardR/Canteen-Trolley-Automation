@@ -2,23 +2,29 @@
 <!DOCTYPE html>
 <html>
 <head runat="server">
-    <title>Canteen System – Meal Booking</title>
+    <title>Canteen System - Meal Booking</title>
     <style>
         * { box-sizing: border-box; margin: 0; padding: 0; }
         body {
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            background-color: #f4f7f9;
+            background: linear-gradient(rgba(13, 71, 161, 0.45) 0%, rgba(25, 118, 210, 0.45) 60%, rgba(66, 165, 245, 0.45) 100%), url('images/tata_steel_morning.png') no-repeat center center fixed;
+            background-size: cover;
+            min-height: 100vh;
             color: #333;
             display: flex;
             justify-content: center;
-            padding-top: 50px;
+            align-items: center;
+            margin: 0;
+            padding: 0;
         }
         .container {
-            background: #fff;
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(10px);
+            -webkit-backdrop-filter: blur(10px);
             width: 500px;
             padding: 30px;
             border-radius: 12px;
-            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+            box-shadow: 0 8px 32px rgba(0,0,0,0.3);
         }
         .header {
             text-align: center;

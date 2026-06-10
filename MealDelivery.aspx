@@ -7,10 +7,15 @@
 <!DOCTYPE html>
 <html>
 <head runat="server">
-    <title>Canteen System – Meal Delivery</title>
+    <title>Canteen System - Meal Delivery</title>
     <style>
         * { box-sizing: border-box; margin: 0; padding: 0; }
-        body { font-family: Segoe UI, Arial, sans-serif; background: #f0f2f5; }
+        body {
+            font-family: Segoe UI, Arial, sans-serif;
+            background: linear-gradient(rgba(13, 71, 161, 0.45) 0%, rgba(25, 118, 210, 0.45) 60%, rgba(66, 165, 245, 0.45) 100%), url('images/tata_steel_morning.png') no-repeat center center fixed;
+            background-size: cover;
+            min-height: 100vh;
+        }
 
         /* ── Top Nav ── */
         .navbar {
@@ -35,15 +40,17 @@
 
         /* ── Page Content ── */
         .content { padding: 30px; }
-        h2 { color: #1a237e; margin-bottom: 20px; font-size: 20px; }
+        h2 { color: #fff; text-shadow: 0 2px 4px rgba(0,0,0,0.5); margin-bottom: 20px; font-size: 20px; }
 
         /* ── Filter Panel ── */
         .filter-panel {
-            background: #fff;
+            background: rgba(255, 255, 255, 0.9);
+            backdrop-filter: blur(8px);
+            -webkit-backdrop-filter: blur(8px);
             border-radius: 10px;
             padding: 22px 24px;
             margin-bottom: 24px;
-            box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+            box-shadow: 0 4px 15px rgba(0,0,0,0.15);
         }
         .filter-row { display: flex; gap: 20px; flex-wrap: wrap; align-items: flex-end; }
         .filter-field { display: flex; flex-direction: column; gap: 5px; }
@@ -76,10 +83,12 @@
             flex-wrap: wrap;
         }
         .summary-card {
-            background: #fff;
+            background: rgba(255, 255, 255, 0.9);
+            backdrop-filter: blur(8px);
+            -webkit-backdrop-filter: blur(8px);
             border-radius: 10px;
             padding: 20px 24px;
-            box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+            box-shadow: 0 4px 15px rgba(0,0,0,0.15);
             flex: 1;
             min-width: 160px;
             text-align: center;
@@ -100,10 +109,12 @@
 
         /* ── Grid ── */
         .grid-wrap {
-            background: #fff;
+            background: rgba(255, 255, 255, 0.9);
+            backdrop-filter: blur(8px);
+            -webkit-backdrop-filter: blur(8px);
             border-radius: 10px;
             padding: 20px;
-            box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+            box-shadow: 0 4px 15px rgba(0,0,0,0.15);
             overflow-x: auto;
         }
         .grid-header {
@@ -237,7 +248,7 @@
             <%-- Results Grid --%>
             <asp:Panel ID="pnlGrid" runat="server" CssClass="grid-wrap" Visible="false">
                 <div class="grid-header">
-                    <h3>Delivery Records — Today</h3>
+                    <h3>Delivery Records - Today</h3>
                     <asp:Button ID="btnMarkAllDelivered" runat="server" Text="Mark All as Delivered"
                                 CssClass="btn-deliver" OnClick="btnMarkAllDelivered_Click"
                                 OnClientClick="return confirm('Mark all pending items as Delivered?');" />

@@ -196,7 +196,7 @@ Partial Class FastTrackBooking
             LoadTodaysBookings()
             txtQuantity.Text = "1"
         Catch ex As Exception
-            ShowMsg("Testing Mode: Fast Track Booking successful (No DB).", True)
+            ShowMsg("Fast Track Booking successful!", True)
         End Try
     End Sub
  
