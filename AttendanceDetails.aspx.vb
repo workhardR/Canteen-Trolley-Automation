@@ -89,8 +89,8 @@ Partial Class AttendanceDetails
     Protected Sub btnShowCanteen_Click(sender As Object, e As EventArgs)
         Dim canteenId As Integer = CInt(ddlCanteen.SelectedValue)
         Dim mealId As Integer = CInt(ddlMeal.SelectedValue)
-        Dim fromDate As Date = Date.ParseExact(txtFromDate.Text, "dd-MM-yyyy", Nothing)
-        Dim toDate As Date = Date.ParseExact(txtToDate.Text, "dd-MM-yyyy", Nothing)
+        Dim fromDate As Date = Date.ParseExact(txtFromDate2.Text, "dd-MM-yyyy", Nothing)
+        Dim toDate As Date = Date.ParseExact(txtToDate2.Text, "dd-MM-yyyy", Nothing)
 
         Dim dt As DataTable = GetCanteenAttendance(canteenId, mealId, fromDate, toDate)
         

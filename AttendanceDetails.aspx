@@ -7,7 +7,20 @@
 <html>
 <head runat="server">
     <title>Attendance Details</title>
+    <!-- Flatpickr CSS & JS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
     <style>
+        /* Date Input with Calendar Icon */
+        .date-input {
+            background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="%231565c0" viewBox="0 0 16 16"><path d="M3.5 0a.5.5 0 0 1 .5.5V1h8V.5a.5.5 0 0 1 1 0V1h1a2 2 0 0 1 2 2v11a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2V3a2 2 0 0 1 2-2h1V.5a.5.5 0 0 1 .5-.5zM1 4v10a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1V4H1z"/></svg>');
+            background-repeat: no-repeat;
+            background-position: right 12px center;
+            background-size: 16px 16px;
+            padding-right: 32px !important;
+            cursor: pointer;
+        }
+
         * { box-sizing: border-box; margin: 0; padding: 0; }
         body {
             font-family: Segoe UI, Arial, sans-serif;
@@ -169,11 +182,11 @@
                     </div>
                     <div class="filter-field">
                         <label>From Date</label>
-                        <asp:TextBox ID="txtFromDate" runat="server" placeholder="dd-MM-yyyy" />
+                        <asp:TextBox ID="txtFromDate" runat="server" placeholder="dd-MM-yyyy" CssClass="date-input" />
                     </div>
                     <div class="filter-field">
                         <label>To Date</label>
-                        <asp:TextBox ID="txtToDate" runat="server" placeholder="dd-MM-yyyy" />
+                        <asp:TextBox ID="txtToDate" runat="server" placeholder="dd-MM-yyyy" CssClass="date-input" />
                     </div>
                     <asp:Button ID="btnShowIndividual" runat="server" Text="Show"
                                 CssClass="btn-show" OnClick="btnShowIndividual_Click" />
@@ -197,11 +210,11 @@
                     </div>
                     <div class="filter-field">
                         <label>From Date</label>
-                        <asp:TextBox ID="txtFromDate2" runat="server" placeholder="dd-MM-yyyy" />
+                        <asp:TextBox ID="txtFromDate2" runat="server" placeholder="dd-MM-yyyy" CssClass="date-input" />
                     </div>
                     <div class="filter-field">
                         <label>To Date</label>
-                        <asp:TextBox ID="txtToDate2" runat="server" placeholder="dd-MM-yyyy" />
+                        <asp:TextBox ID="txtToDate2" runat="server" placeholder="dd-MM-yyyy" CssClass="date-input" />
                     </div>
                     <asp:Button ID="btnShowCanteen" runat="server" Text="Show"
                                 CssClass="btn-show" OnClick="btnShowCanteen_Click" />
@@ -230,6 +243,15 @@
             </asp:Panel>
 
         </div>
+        <script>
+            document.addEventListener("DOMContentLoaded", function () {
+                flatpickr(".date-input", {
+                    dateFormat: "d-m-Y",
+                    allowInput: true,
+                    disableMobile: "true"
+                });
+            });
+        </script>
     </form>
 </body>
 </html>
